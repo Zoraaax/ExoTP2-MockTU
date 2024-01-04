@@ -10,6 +10,7 @@ public class Salaire {
      * Seuil minimum de paiement pour le taux horaire.
      */
     public static final double TAUX_HORAIRE_MINIMUM = 8.8;
+    public static final double PAIEMENT_HEURES_SUPPLEMENTAIRES = 1.25;
     private double tauxHoraire;
 
     public double getTauxHoraire() {
@@ -49,7 +50,7 @@ public class Salaire {
         if (heuresTravaillees > HEURES_TRAVAILLEES_MENSUEL_BASE) {
             double salaire = 0;
             salaire += HEURES_TRAVAILLEES_MENSUEL_BASE * this.tauxHoraire;
-            salaire += (heuresTravaillees - HEURES_TRAVAILLEES_MENSUEL_BASE) * this.tauxHoraire;
+            salaire += (heuresTravaillees - HEURES_TRAVAILLEES_MENSUEL_BASE) * this.tauxHoraire * PAIEMENT_HEURES_SUPPLEMENTAIRES;
 
             return salaire;
         }
