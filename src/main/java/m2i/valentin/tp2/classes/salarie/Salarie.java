@@ -1,4 +1,8 @@
-package m2i.valentin.tp2.classes;
+package m2i.valentin.tp2.classes.salarie;
+
+import m2i.valentin.tp2.classes.adresse.Adresse;
+import m2i.valentin.tp2.classes.identite.Identite;
+import m2i.valentin.tp2.classes.salaire.Salaire;
 
 public abstract class Salarie {
     private Salaire salaire;

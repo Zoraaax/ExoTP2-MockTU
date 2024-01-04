@@ -1,4 +1,4 @@
-package m2i.valentin.tp2.classes;
+package m2i.valentin.tp2.classes.adresse;
 
 public class Adresse {
     private int voie;

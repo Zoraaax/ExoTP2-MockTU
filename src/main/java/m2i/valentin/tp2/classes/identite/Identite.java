@@ -1,4 +1,6 @@
-package m2i.valentin.tp2.classes;
+package m2i.valentin.tp2.classes.identite;
+
+import m2i.valentin.tp2.classes.adresse.Adresse;
 
 public class Identite {
     private String nom;
