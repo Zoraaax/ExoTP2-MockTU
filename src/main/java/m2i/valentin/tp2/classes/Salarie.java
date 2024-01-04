@@ -30,11 +30,20 @@ public abstract class Salarie {
     }
 
     /**
-     * Fait travailler le salarié.
+     * Fait travailler le salarié et le paie pour son travail.
      * @param heures
      */
-    public void travailler(int heures) {
-        System.out.println(this.getIdentite().getNom() + this.getIdentite().getPrenom() + "Travaille " + heures + " heures");
+    public void travailler(double heures) {
+        double paye = salaire.payer(heures);
+        System.out.println("Le salarié a travaillé " + heures + " heures " + "et a été payé " + paye + "€");
+    }
+
+    /**
+     * Fait travailler le salarié et le paie sur une base de 151.67 heures pour son travail.
+     */
+    public void travailler() {
+        this.travailler(151.67);
+        System.out.println("Le salarié " + this.getIdentite().getNom() + this.getIdentite().getPrenom() + "a travaillé 151.67 heures et a été payé " + salaire.payer(151.67) + "€");
     }
 
     /**
@@ -43,10 +52,9 @@ public abstract class Salarie {
      * @return double - salaire
      */
     public double augmenter(double pourcentage) {
-        double salaire = this.getSalaire().getTauxHoraire();
-        salaire += salaire * pourcentage / 100;
-        this.getSalaire().setTauxHoraire(salaire);
+        double nouveauTauxHoraire = this.getSalaire().getTauxHoraire() * (1 + pourcentage / 100);
+        this.getSalaire().setTauxHoraire(nouveauTauxHoraire);
 
-        return salaire;
+        return nouveauTauxHoraire;
     }
 }
