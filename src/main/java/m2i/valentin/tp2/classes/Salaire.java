@@ -5,7 +5,7 @@ public class Salaire {
     /**
      * Base de 151 heures travaillées.
      */
-    public static final int HEURES_TRAVAILLEES_MENSUEL_BASE = 151;
+    public static final double HEURES_TRAVAILLEES_MENSUEL_BASE = 151.67;
     /**
      * Seuil minimum de paiement pour le taux horaire.
      */
