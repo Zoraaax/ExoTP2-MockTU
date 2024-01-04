@@ -7,6 +7,14 @@ public class Adresse {
     private String ville;
     private String pays;
 
+    public Adresse(int voie, String rue, int codePostal, String ville, String pays) {
+        this.voie = voie;
+        this.rue = rue;
+        this.codePostal = codePostal;
+        this.ville = ville;
+        this.pays = pays;
+    }
+
     public int getVoie() {
         return this.voie;
     }

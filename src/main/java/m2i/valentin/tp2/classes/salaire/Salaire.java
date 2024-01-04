@@ -13,6 +13,10 @@ public class Salaire {
     public static final double PAIEMENT_HEURES_SUPPLEMENTAIRES = 1.25;
     private double tauxHoraire;
 
+    public Salaire(double tauxHoraire) {
+        this.tauxHoraire = tauxHoraire;
+    }
+
     public double getTauxHoraire() {
         return this.tauxHoraire;
     }

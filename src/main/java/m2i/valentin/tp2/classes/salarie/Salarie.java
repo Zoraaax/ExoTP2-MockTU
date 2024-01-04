@@ -8,6 +8,11 @@ public abstract class Salarie {
     private Salaire salaire;
     private Identite identite;
 
+    public Salarie(Salaire salaire, Identite identite) {
+        this.salaire = salaire;
+        this.identite = identite;
+    }
+
     public Salaire getSalaire() {
         return this.salaire;
     }
